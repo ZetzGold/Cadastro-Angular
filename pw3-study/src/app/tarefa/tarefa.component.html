@@ -1,0 +1,44 @@
+<form class="example-form" [formGroup]="cadastroForm2" (ngSubmit)="onEnviar()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Resumo</mat-label>
+      <input matInput placeholder="Ex. DNS com Falha" value="" formControlName="resumo">
+    </mat-form-field>
+
+	<br />
+
+	<label>Tipo de Problema:</label>
+  <mat-radio-group aria-label="Selecione uma opção" formControlName="problema">
+    <mat-radio-button value="TAREFA">Tarefa</mat-radio-button>
+    <mat-radio-button value="BUG">Bug</mat-radio-button>
+  </mat-radio-group>
+
+	<br />
+
+  <mat-form-field>
+    <mat-label>Prioridade</mat-label>
+    <select matNativeControl required  formControlName="prioridade">
+      <option value="Crítica">Crítica</option>
+      <option value="Alta">Alta</option>
+      <option value="Média">Média</option>
+      <option value="Baixa">Baixa</option>
+    </select>
+  </mat-form-field>
+
+	<br />
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Prazo Final</mat-label>
+    <input type="date" matInput value="" formControlName="prazo">
+  </mat-form-field>
+
+	<br />
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Descrição</mat-label>
+    <textarea matInput placeholder="Escreva a descrição" formControlName="descricao"></textarea>
+  </mat-form-field>
+
+	<br />
+
+  <button mat-stroked-button color="accent">Enviar</button>
+</form>

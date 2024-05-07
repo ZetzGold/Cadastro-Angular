@@ -1,0 +1,36 @@
+#corpo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#container{
+  width: 40vw;
+  height: 70vh;
+  background-color: rgb(158, 247, 158);
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#titulo{
+  color: white;
+  font-size: 9vw;
+  -webkit-text-stroke: 5px black;
+  margin-bottom: 10vh;
+}
+
+.ideia{
+  font-size: 3vw;
+  color:green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.texto{
+  font-size: 3vw;
+  margin-top: 10px;
+}

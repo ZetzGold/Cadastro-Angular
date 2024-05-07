@@ -1,0 +1,107 @@
+#dupla{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.card {
+  position: relative;
+  margin: 5%;
+  width: 35rem;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2vh;
+  background-color: #f2ceae92;
+  border: 5px solid #73504D;
+  border-radius: 10%;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+.cd2{
+  background-color: #d9ceb08d;
+  border: 5px solid #1D4E59;
+}
+.card:hover{
+  background-color: #f2ceae;
+  -webkit-box-shadow: 1px 1px 13px #73504D, -1px -1px 13px #50403e;
+  box-shadow: 1px 1px 120px #73504D, -1px -1px 13px #50403e;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+.cd2:hover{
+  background-color: #d9ceb0;
+  -webkit-box-shadow: 1px 1px 13px #1D4E59, -1px -1px 13px #315057;
+  box-shadow: 1px 1px 120px #1D4E59, -1px -1px 13px #315057;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+.fundo{
+  background-image: url("../../assets/wallpaper1.jpeg");
+  background-size: 100%;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+.fundo2{
+  background-image: url("../../assets/wallpaper2.jpeg");
+  background-size: 100%;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+.list-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card-img-top{
+  height: 30vh;
+  width: 30vh;
+  border: 3px solid #73504D;
+  border-radius: 100%;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+.img2{
+  border: 3px solid #1D4E59;
+}
+.card-img-top:hover {
+  -webkit-box-shadow: 1px 1px 13px #73504D, -1px -1px 13px #50403e;
+  box-shadow: 1px 1px 120px #73504D, -1px -1px 13px #50403e;
+  color: #d6d6d6;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+.img2:hover {
+  -webkit-box-shadow: 1px 1px 13px #1D4E59, -1px -1px 13px #315057;
+  box-shadow: 1px 1px 120px #1D4E59, -1px -1px 13px #315057;
+  color: #d6d6d6;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+.card-body{
+  text-align: center;
+}
+.card-title{
+  font-size: 2.6vw;
+}
+.card-text{
+  font-size: 1.6vw;
+}
+.RM{
+  font-size: 1.6vw;
+  font-weight: bold;
+  margin-top: 5vh;
+}
+.icone{
+  margin-right: 0.2vw;
+}

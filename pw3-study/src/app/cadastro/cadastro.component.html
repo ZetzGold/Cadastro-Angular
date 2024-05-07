@@ -1,0 +1,66 @@
+<div id="corpo">
+  <form class="example-form" [formGroup]="cadastroForm" (ngSubmit)="onEnviar()">
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Ex. {{plceholderNome}}" formControlName="nome">
+
+        <mat-error *ngIf="cadastroForm.controls.nome.hasError('required')">Nome é obrigatório</mat-error>
+
+    </mat-form-field>
+
+    <br />
+
+    <mat-form-field class="example-full-width">
+        <mat-label>E-mail</mat-label>
+        <input matInput placeholder="Ex. horacio@etec.sp.gov.br" formControlName="email">
+
+        <mat-error *ngIf="cadastroForm.controls.email.hasError('required')">E-mail é obrigatório</mat-error>
+        <mat-error *ngIf="cadastroForm.controls.email.hasError('email')">E-mail inválido</mat-error>
+
+    </mat-form-field>
+
+    <br />
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Nome de Usuário</mat-label>
+        <input matInput placeholder="Ex. horacio.augusto" formControlName="usuario">
+
+        <mat-error *ngIf="cadastroForm.controls.usuario.hasError('required')">Nome de Usuário obrigatório</mat-error>
+    </mat-form-field>
+
+    <br />
+
+    <mat-form-field>
+        <mat-label>Senha</mat-label>
+        <input matInput [type]="ocultarSenha ? 'password' : 'text'" formControlName="senha">
+        <button mat-icon-button matSuffix (click)="ocultarSenha = !ocultarSenha" [attr.aria-label]="'Ocultar senha'" [attr.aria-pressed]="ocultarSenha">
+          <mat-icon>{{ocultarSenha ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+
+        <mat-error *ngIf="cadastroForm.controls.senha.hasError('required')">Senha é obrigatório</mat-error>
+        <mat-error *ngIf="cadastroForm.controls.senha.hasError('minLength(2)')">A senha deve ter mais de 2 caracteres</mat-error>
+        <mat-error *ngIf="cadastroForm.controls.senha.hasError('maxLength(17)')">A senha deve ter menos de 17 caracteres</mat-error>
+
+      </mat-form-field>
+
+      <br />
+
+    <mat-form-field>
+        <mat-label>Confirmar senha</mat-label>
+        <input matInput [type]="ocultarSenha ? 'password' : 'text'" formControlName="confirmarSenha">
+        <button mat-icon-button matSuffix (click)="ocultarSenha = !ocultarSenha" [attr.aria-label]="'Ocultar senha'" [attr.aria-pressed]="ocultarSenha">
+          <mat-icon>{{ocultarSenha ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+
+        <mat-error *ngIf="false">Confirmar senha é obrigatório</mat-error>
+        <mat-error *ngIf="false">As senhas devem ser as mesmas</mat-error>
+
+      </mat-form-field>
+
+    <br />
+
+    <button mat-flat-button color="primary">Enviar</button>
+
+  </form>
+</div>
